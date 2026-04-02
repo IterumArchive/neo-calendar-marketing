@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://neo-calendar.dev/sitemap.xml
+Sitemap: https://neocalendar.iterumarchive.org/sitemap.xml

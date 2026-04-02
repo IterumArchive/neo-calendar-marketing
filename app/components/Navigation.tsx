@@ -24,6 +24,7 @@ export function Navigation() {
           <Link
             href="/"
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            aria-label="NeoCalendar home"
           >
             <span className="text-2xl">📅</span>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
@@ -47,6 +48,7 @@ export function Navigation() {
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
                       : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700"
                   }`}
+                  aria-current={isActive ? "page" : undefined}
                 >
                   {label}
                 </Link>
@@ -94,6 +96,7 @@ export function Navigation() {
                         ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
                         : "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700"
                     }`}
+                    aria-current={isActive ? "page" : undefined}
                   >
                     {label}
                   </Link>

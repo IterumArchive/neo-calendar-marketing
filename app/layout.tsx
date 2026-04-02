@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Iterum Archive", url: "https://iterumarchive.org" }],
   creator: "Iterum Archive",
   publisher: "Iterum Archive",
-  metadataBase: new URL("https://neo-calendar.dev"),
+  metadataBase: new URL("https://neocalendar.iterumarchive.org"),
   alternates: {
     canonical: "/",
   },
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://neo-calendar.dev",
+    url: "https://neocalendar.iterumarchive.org",
     title: "NeoCalendar - Universal Date Conversion Across 12 Calendar Systems",
     description:
       "Convert dates across 12 calendar systems with mathematical precision. Open-source TypeScript library with 1,500+ tests and zero-day error.",
@@ -112,7 +112,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://github.com" />
         <link rel="preconnect" href="https://raw.githubusercontent.com" />
         <link rel="preconnect" href="https://registry.npmjs.org" />
-        
+
         {/* DNS Prefetch for CDNs */}
         <link rel="dns-prefetch" href="https://unpkg.com" />
         <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
