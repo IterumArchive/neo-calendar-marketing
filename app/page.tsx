@@ -186,6 +186,185 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Quick Start CTAs */}
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">
+            Explore the Playground
+          </h2>
+
+          {/* Row 1: Converter & JDN Lookup */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+            <Link
+              href="/converter"
+              className="group bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center"
+            >
+              <div className="text-6xl mb-4">⚡</div>
+              <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform">
+                Converter →
+              </h3>
+              <p className="text-cyan-100 leading-relaxed">
+                Professional conversion tool with multi-calendar support.
+              </p>
+            </Link>
+
+            <Link
+              href="/inspector"
+              className="group bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center"
+            >
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform">
+                JDN Lookup →
+              </h3>
+              <p className="text-emerald-100 leading-relaxed">
+                Explore Julian Day Numbers and universal date reference.
+              </p>
+            </Link>
+          </div>
+
+          {/* Row 2: Date Intelligence (Full Width) */}
+          <div className="mb-6">
+            <Link
+              href="/arithmetic"
+              className="group bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center block"
+            >
+              <div className="text-6xl mb-4">🧮</div>
+              <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform">
+                Date Intelligence →
+              </h3>
+              <p className="text-blue-100 leading-relaxed">
+                Advanced calendar operations and cross-calendar math.
+              </p>
+            </Link>
+          </div>
+
+          {/* Row 3: Code Examples & Use Cases */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <Link
+              href="/api-explorer"
+              className="group bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center"
+            >
+              <div className="text-6xl mb-4">🧑‍💻</div>
+              <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform">
+                Code Examples →
+              </h3>
+              <p className="text-orange-100 leading-relaxed">
+                Interactive code examples and tutorials.
+              </p>
+            </Link>
+
+            <Link
+              href="/use-cases"
+              className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center"
+            >
+              <div className="text-6xl mb-4">💡</div>
+              <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform">
+                Use Cases →
+              </h3>
+              <p className="text-purple-100 leading-relaxed">
+                Real problems solved with calendar conversion.
+              </p>
+            </Link>
+          </div>
+        </div>
+
+        {/* Validation & Credibility Section */}
+        <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 mb-12">
+          <h2 className="text-3xl font-bold text-white mb-6 text-center">
+            Rigorously Tested & Validated
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-gradient-to-br from-emerald-900/20 to-emerald-900/5 border border-emerald-700/50 rounded-xl p-6">
+              <div className="text-5xl font-bold text-emerald-400 mb-2">0</div>
+              <div className="text-sm text-slate-300 font-semibold mb-1">
+                0-Day Error
+              </div>
+              <div className="text-xs text-slate-400">
+                Across 1,500+ validation tests
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-cyan-900/20 to-cyan-900/5 border border-cyan-700/50 rounded-xl p-6">
+              <div className="text-5xl font-bold text-cyan-400 mb-2">3</div>
+              <div className="text-sm text-slate-300 font-semibold mb-1">
+                Validation Tiers
+              </div>
+              <div className="text-xs text-slate-400">
+                Internal consistency · Cross-calendar · External authority
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-900/20 to-purple-900/5 border border-purple-700/50 rounded-xl p-6">
+              <div className="text-5xl font-bold text-purple-400 mb-2">12</div>
+              <div className="text-sm text-slate-300 font-semibold mb-1">
+                Calendar Systems
+              </div>
+              <div className="text-xs text-slate-400">
+                All verified against published algorithms
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/50 mb-6">
+            <h3 className="text-xl font-bold text-white mb-4">
+              How We Validate Correctness
+            </h3>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <div className="bg-emerald-600 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold flex-shrink-0 text-sm">
+                  1
+                </div>
+                <div>
+                  <div className="text-slate-200 font-semibold text-sm">
+                    Internal Consistency (Bijection)
+                  </div>
+                  <div className="text-slate-400 text-xs">
+                    Date → JDN → Date = 0-day error. Perfect round-trips across
+                    all calendars.
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="bg-cyan-600 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold flex-shrink-0 text-sm">
+                  2
+                </div>
+                <div>
+                  <div className="text-slate-200 font-semibold text-sm">
+                    Cross-Calendar Alignment (Triangle Test)
+                  </div>
+                  <div className="text-slate-400 text-xs">
+                    Calendar A → Calendar B → Calendar A through JDN. 360
+                    triangles, zero drift.
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold flex-shrink-0 text-sm">
+                  3
+                </div>
+                <div>
+                  <div className="text-slate-200 font-semibold text-sm">
+                    External Authority Verification
+                  </div>
+                  <div className="text-slate-400 text-xs">
+                    Validated against Dershowitz & Reingold algorithms and
+                    religious authorities.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/dashboard"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold rounded-lg transition shadow-lg"
+            >
+              <span>📊</span> View Full Validation Dashboard →
+            </Link>
+          </div>
+        </div>
+
         {/* Get Started - Installation */}
         <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 mb-12">
           <h2 className="text-3xl font-bold text-white mb-6 text-center">
@@ -336,177 +515,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Quick Start CTAs */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">
-            Explore the Playground
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <Link
-              href="/converter"
-              className="group bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center"
-            >
-              <div className="text-6xl mb-4">⚡</div>
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform">
-                Converter →
-              </h3>
-              <p className="text-cyan-100 leading-relaxed">
-                Professional conversion tool with multi-calendar support.
-              </p>
-            </Link>
-
-            <Link
-              href="/arithmetic"
-              className="group bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center"
-            >
-              <div className="text-6xl mb-4">🧮</div>
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform">
-                Date Intelligence →
-              </h3>
-              <p className="text-blue-100 leading-relaxed">
-                Advanced calendar operations and cross-calendar math.
-              </p>
-            </Link>
-
-            <Link
-              href="/api-explorer"
-              className="group bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center"
-            >
-              <div className="text-6xl mb-4">🧑‍💻</div>
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform">
-                Code Examples →
-              </h3>
-              <p className="text-orange-100 leading-relaxed">
-                Interactive code examples and tutorials.
-              </p>
-            </Link>
-
-            <Link
-              href="/use-cases"
-              className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center"
-            >
-              <div className="text-6xl mb-4">💡</div>
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform">
-                Use Cases →
-              </h3>
-              <p className="text-purple-100 leading-relaxed">
-                Real problems solved with calendar conversion.
-              </p>
-            </Link>
-
-            <Link
-              href="/inspector"
-              className="group bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center"
-            >
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform">
-                JDN Lookup →
-              </h3>
-              <p className="text-emerald-100 leading-relaxed">
-                Explore Julian Day Numbers and universal date reference.
-              </p>
-            </Link>
-          </div>
-        </div>
-
-        {/* Validation & Credibility Section */}
-        <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 mb-12">
-          <h2 className="text-3xl font-bold text-white mb-6 text-center">
-            Rigorously Tested & Validated
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-gradient-to-br from-emerald-900/20 to-emerald-900/5 border border-emerald-700/50 rounded-xl p-6">
-              <div className="text-5xl font-bold text-emerald-400 mb-2">0</div>
-              <div className="text-sm text-slate-300 font-semibold mb-1">
-                0-Day Error
-              </div>
-              <div className="text-xs text-slate-400">
-                Across 1,500+ validation tests
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-cyan-900/20 to-cyan-900/5 border border-cyan-700/50 rounded-xl p-6">
-              <div className="text-5xl font-bold text-cyan-400 mb-2">3</div>
-              <div className="text-sm text-slate-300 font-semibold mb-1">
-                Validation Tiers
-              </div>
-              <div className="text-xs text-slate-400">
-                Internal consistency · Cross-calendar · External authority
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-purple-900/20 to-purple-900/5 border border-purple-700/50 rounded-xl p-6">
-              <div className="text-5xl font-bold text-purple-400 mb-2">12</div>
-              <div className="text-sm text-slate-300 font-semibold mb-1">
-                Calendar Systems
-              </div>
-              <div className="text-xs text-slate-400">
-                All verified against published algorithms
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/50 mb-6">
-            <h3 className="text-xl font-bold text-white mb-4">
-              How We Validate Correctness
-            </h3>
-            <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <div className="bg-emerald-600 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold flex-shrink-0 text-sm">
-                  1
-                </div>
-                <div>
-                  <div className="text-slate-200 font-semibold text-sm">
-                    Internal Consistency (Bijection)
-                  </div>
-                  <div className="text-slate-400 text-xs">
-                    Date → JDN → Date = 0-day error. Perfect round-trips across
-                    all calendars.
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="bg-cyan-600 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold flex-shrink-0 text-sm">
-                  2
-                </div>
-                <div>
-                  <div className="text-slate-200 font-semibold text-sm">
-                    Cross-Calendar Alignment (Triangle Test)
-                  </div>
-                  <div className="text-slate-400 text-xs">
-                    Calendar A → Calendar B → Calendar A through JDN. 360
-                    triangles, zero drift.
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center font-bold flex-shrink-0 text-sm">
-                  3
-                </div>
-                <div>
-                  <div className="text-slate-200 font-semibold text-sm">
-                    External Authority Verification
-                  </div>
-                  <div className="text-slate-400 text-xs">
-                    Validated against Dershowitz & Reingold algorithms and
-                    religious authorities.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Link
-              href="/dashboard"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold rounded-lg transition shadow-lg"
-            >
-              <span>📊</span> View Full Validation Dashboard →
-            </Link>
-          </div>
-        </div>
-
         {/* Calendar Evolution Timeline */}
         <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 mb-12">
           <h2 className="text-2xl font-bold text-white mb-3 flex items-center gap-2">
@@ -544,8 +552,8 @@ export default function Home() {
                   Neo Calendar
                 </div>
                 <div className="text-sm text-slate-400">
-                  Universal date conversion library supporting all major
-                  calendar systems with mathematical precision
+                  Universal date conversion library supporting 12 calendar
+                  systems with mathematical precision
                 </div>
               </div>
             </div>
@@ -665,14 +673,23 @@ export default function Home() {
         </div>
 
         {/* Footer Note */}
-        <div className="mt-12 text-center text-slate-500 text-sm">
+        <div className="mt-12 text-center text-slate-500 text-sm space-y-3">
           <p>
-            Powered by Julian Day Number (JDN) · Following Dershowitz & Reingold
-            standards
+            <p> Powered by TypeScript, Vitest, the Julian Day Number (JDN), </p>
+            and centuries of astronomical observation and calendar research and
+            data.{" "}
           </p>
-          <p className="mt-2">
-            Built with TypeScript · React · Next.js · Tested with Vitest
-          </p>
+          <div className=" text-center text-slate-500 text-sm space-y-2">
+            Built by{" "}
+            <a
+              href="https://iterumarchive.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-slate-300 underline decoration-slate-600 hover:decoration-slate-400 transition-colors"
+            >
+              Iterum Archive
+            </a>
+          </div>
         </div>
       </div>
     </div>
