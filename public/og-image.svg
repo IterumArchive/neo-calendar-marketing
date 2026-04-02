@@ -1,0 +1,85 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background Gradient -->
+    <defs>
+        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#1e3a8a;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#581c87;stop-opacity:1" />
+        </linearGradient>
+
+        <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#a78bfa;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#f472b6;stop-opacity:1" />
+        </linearGradient>
+
+        <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="1200" height="630" fill="url(#bgGradient)" />
+
+    <!-- Decorative Elements -->
+    <circle cx="100" cy="100" r="150" fill="#1e3a8a" opacity="0.3" />
+    <circle cx="1100" cy="530" r="200" fill="#581c87" opacity="0.3" />
+
+    <!-- Main Content Container -->
+    <g>
+        <!-- Icon/Logo Area -->
+        <circle cx="150" cy="315" r="60" fill="url(#accentGradient)" opacity="0.2" />
+        <text x="150" y="340" font-family="system-ui, -apple-system, sans-serif" font-size="64" text-anchor="middle"
+            fill="#60a5fa">📅</text>
+
+        <!-- Main Title -->
+        <text x="280" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold"
+            fill="url(#titleGradient)">
+            NeoCalendar
+        </text>
+
+        <!-- Tagline -->
+        <text x="280" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="600"
+            fill="#cbd5e1">
+            One Moment. Infinite Perspectives.
+        </text>
+
+        <!-- Description -->
+        <text x="280" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#94a3b8">
+            Convert dates across 12 calendar systems
+        </text>
+        <text x="280" y="415" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#94a3b8">
+            with mathematical precision
+        </text>
+
+        <!-- Stats/Features -->
+        <g transform="translate(280, 470)">
+            <!-- Badge 1 -->
+            <rect x="0" y="0" width="180" height="50" rx="8" fill="#1e3a8a" opacity="0.5" />
+            <text x="90" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600"
+                text-anchor="middle" fill="#60a5fa">
+                12 Calendars
+            </text>
+
+            <!-- Badge 2 -->
+            <rect x="200" y="0" width="180" height="50" rx="8" fill="#581c87" opacity="0.5" />
+            <text x="290" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600"
+                text-anchor="middle" fill="#a78bfa">
+                0-Day Error
+            </text>
+
+            <!-- Badge 3 -->
+            <rect x="400" y="0" width="180" height="50" rx="8" fill="#7c2d12" opacity="0.5" />
+            <text x="490" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600"
+                text-anchor="middle" fill="#f472b6">
+                Open Source
+            </text>
+        </g>
+    </g>
+
+    <!-- Footer -->
+    <text x="280" y="590" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#64748b">
+        TypeScript · Julian Day Number · Built by Iterum Archive
+    </text>
+</svg>

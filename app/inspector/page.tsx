@@ -211,12 +211,14 @@ export default function InspectorPage() {
                   <button
                     onClick={copyJdnUrl}
                     className="flex-1 px-4 py-2 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700/50 rounded-lg text-slate-300 text-sm transition"
+                    aria-label="Copy shareable URL with current JDN"
                   >
                     {copied ? "✓ Copied!" : "📋 Copy URL"}
                   </button>
                   <button
                     onClick={copyResults}
                     className="flex-1 px-4 py-2 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700/50 rounded-lg text-slate-300 text-sm transition"
+                    aria-label="Copy all calendar conversion results"
                   >
                     📤 Copy Results
                   </button>

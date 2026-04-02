@@ -405,12 +405,14 @@ export default function ConverterPage() {
                   <button
                     onClick={selectAllTargets}
                     className="px-4 py-2 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700/50 rounded-lg text-white text-sm transition"
+                    aria-label="Select all calendar systems for conversion"
                   >
                     Select All
                   </button>
                   <button
                     onClick={clearAllTargets}
                     className="px-4 py-2 bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700/50 rounded-lg text-white text-sm transition"
+                    aria-label="Clear all selected calendar systems"
                   >
                     Clear
                   </button>

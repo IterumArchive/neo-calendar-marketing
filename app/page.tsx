@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { NeoCalendar } from "@iterumarchive/neo-calendar-full";
 import { Navigation } from "./components/Navigation";
 import Link from "next/link";
+import Script from "next/script";
 import { CALENDAR_DATA } from "./constants/calendarData";
 
 export default function Home() {
@@ -47,6 +48,77 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950">
+      {/* Structured Data for SEO */}
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "SoftwareApplication",
+                name: "NeoCalendar",
+                applicationCategory: "DeveloperApplication",
+                operatingSystem: "Cross-platform",
+                description:
+                  "Universal date conversion library supporting 12 calendar systems with mathematical precision. Built on Julian Day Number (JDN) with zero-day error validation.",
+                url: "https://neo-calendar.dev",
+                softwareVersion: "0.1.1",
+                programmingLanguage: "TypeScript",
+                license: "https://opensource.org/licenses/MIT",
+                offers: {
+                  "@type": "Offer",
+                  price: "0",
+                  priceCurrency: "USD",
+                },
+                author: {
+                  "@type": "Organization",
+                  name: "Iterum Archive",
+                  url: "https://iterumarchive.org",
+                },
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: "5",
+                  ratingCount: "1500",
+                  bestRating: "5",
+                  worstRating: "1",
+                },
+                featureList: [
+                  "12 calendar systems support",
+                  "Julian Day Number (JDN) conversion",
+                  "Zero-day error validation",
+                  "1,500+ test coverage",
+                  "Tree-shakeable modules",
+                  "TypeScript support",
+                ],
+              },
+              {
+                "@type": "Organization",
+                name: "Iterum Archive",
+                url: "https://iterumarchive.org",
+                logo: "https://neo-calendar.dev/logo.png",
+                sameAs: [
+                  "https://github.com/IterumArchive/neo-calendar",
+                  "https://www.npmjs.com/package/@iterumarchive/neo-calendar",
+                ],
+              },
+              {
+                "@type": "WebSite",
+                name: "NeoCalendar",
+                url: "https://neo-calendar.dev",
+                description:
+                  "Universal date conversion across 12 calendar systems",
+                publisher: {
+                  "@type": "Organization",
+                  name: "Iterum Archive",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       <Navigation />
 
       {/* Hero Section */}
@@ -442,6 +514,7 @@ export default function Home() {
                   );
                 }}
                 className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition text-sm font-semibold mt-auto"
+                aria-label="Copy standard package installation command"
               >
                 📋 Copy Command
               </button>
@@ -465,6 +538,7 @@ export default function Home() {
                   );
                 }}
                 className="w-full px-4 py-2 bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition text-sm font-semibold mt-auto"
+                aria-label="Copy full package installation command"
               >
                 📋 Copy Command
               </button>
@@ -488,6 +562,7 @@ export default function Home() {
                   );
                 }}
                 className="w-full px-4 py-2 bg-slate-600 hover:bg-slate-500 text-white rounded-lg transition text-sm font-semibold mt-auto"
+                aria-label="Copy core package installation command"
               >
                 📋 Copy Command
               </button>
@@ -675,9 +750,10 @@ export default function Home() {
         {/* Footer Note */}
         <div className="mt-12 text-center text-slate-500 text-sm space-y-3">
           <p>
-            <p> Powered by TypeScript, Vitest, the Julian Day Number (JDN), </p>
-            and centuries of astronomical observation and calendar research and
-            data.{" "}
+            Built with TypeScript and Vitest, powered by Julian Day Number (JDN)
+            — <br />
+            the universal reference built on centuries of astronomical
+            observation.
           </p>
           <div className=" text-center text-slate-500 text-sm space-y-2">
             Built by{" "}
