@@ -510,97 +510,97 @@ export default function DashboardPage() {
                   Calendar Epochs & Historical Names
                 </h4>
                 <div className="overflow-x-auto -mx-4 px-4">
-                <table className="w-full text-xs">
-                  <thead>
-                    <tr className="border-b border-indigo-700/30">
-                      <th className="text-left py-2 text-indigo-300 font-semibold">
-                        Calendar
-                      </th>
-                      <th className="text-left py-2 text-indigo-300 font-semibold">
-                        Epoch Name
-                      </th>
-                      <th className="text-right py-2 text-indigo-300 font-semibold">
-                        JDN
-                      </th>
-                      <th className="text-left py-2 pl-4 text-indigo-300 font-semibold">
-                        Proleptic Date
-                      </th>
-                      <th className="text-left py-2 pl-4 text-indigo-300 font-semibold">
-                        Leap Year Rule
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-slate-300">
-                    <tr className="border-b border-slate-700/20">
-                      <td className="py-2">Gregorian</td>
-                      <td className="py-2 text-cyan-400">
-                        Anno Domini / Lilian
-                      </td>
-                      <td className="text-right py-2 font-mono">1,721,426</td>
-                      <td className="py-2 pl-4 text-slate-400">
-                        January 1, 1 CE
-                      </td>
-                      <td className="py-2 pl-4 text-xs text-slate-500">
-                        400-year rule (div by 400 or div by 4 but not 100)
-                      </td>
-                    </tr>
-                    <tr className="border-b border-slate-700/20">
-                      <td className="py-2">Hebrew</td>
-                      <td className="py-2 text-cyan-400">Anno Mundi</td>
-                      <td className="text-right py-2 font-mono">347,996</td>
-                      <td className="py-2 pl-4 text-slate-400">
-                        Tishri 1, 1 AM (3761 BCE)
-                      </td>
-                      <td className="py-2 pl-4 text-xs text-slate-500">
-                        19-year Metonic cycle (7 leap years per cycle)
-                      </td>
-                    </tr>
-                    <tr className="border-b border-slate-700/20">
-                      <td className="py-2">Islamic</td>
-                      <td className="py-2 text-cyan-400">Hijri</td>
-                      <td className="text-right py-2 font-mono">1,948,440</td>
-                      <td className="py-2 pl-4 text-slate-400">
-                        Friday, July 19, 622 CE
-                      </td>
-                      <td className="py-2 pl-4 text-xs text-slate-500">
-                        30-year cycle (11 leap years:
-                        2,5,7,10,13,16,18,21,24,26,29)
-                      </td>
-                    </tr>
-                    <tr className="border-b border-slate-700/20">
-                      <td className="py-2">Coptic</td>
-                      <td className="py-2 text-cyan-400">Era of Martyrs</td>
-                      <td className="text-right py-2 font-mono">1,825,030</td>
-                      <td className="py-2 pl-4 text-slate-400">
-                        August 29, 284 CE
-                      </td>
-                      <td className="py-2 pl-4 text-xs text-slate-500">
-                        Simple 4-year rule (every 4th year)
-                      </td>
-                    </tr>
-                    <tr className="border-b border-slate-700/20">
-                      <td className="py-2">Persian</td>
-                      <td className="py-2 text-cyan-400">Nowruz / Jalali</td>
-                      <td className="text-right py-2 font-mono">1,948,321</td>
-                      <td className="py-2 pl-4 text-slate-400">
-                        March 22, 622 CE
-                      </td>
-                      <td className="py-2 pl-4 text-xs text-slate-500">
-                        33-year cycle (8 leap years per cycle)
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="py-2">Before Present</td>
-                      <td className="py-2 text-cyan-400">
-                        Radiocarbon Standard
-                      </td>
-                      <td className="text-right py-2 font-mono">2,433,283</td>
-                      <td className="py-2 pl-4 text-slate-400">
-                        January 1, 1950 CE
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                  <table className="w-full text-xs">
+                    <thead>
+                      <tr className="border-b border-indigo-700/30">
+                        <th className="text-left py-2 text-indigo-300 font-semibold">
+                          Calendar
+                        </th>
+                        <th className="text-left py-2 text-indigo-300 font-semibold">
+                          Epoch Name
+                        </th>
+                        <th className="text-right py-2 text-indigo-300 font-semibold">
+                          JDN
+                        </th>
+                        <th className="text-left py-2 pl-4 text-indigo-300 font-semibold">
+                          Proleptic Date
+                        </th>
+                        <th className="text-left py-2 pl-4 text-indigo-300 font-semibold">
+                          Leap Year Rule
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-slate-300">
+                      <tr className="border-b border-slate-700/20">
+                        <td className="py-2">Gregorian</td>
+                        <td className="py-2 text-cyan-400">
+                          Anno Domini / Lilian
+                        </td>
+                        <td className="text-right py-2 font-mono">1,721,426</td>
+                        <td className="py-2 pl-4 text-slate-400">
+                          January 1, 1 CE
+                        </td>
+                        <td className="py-2 pl-4 text-xs text-slate-500">
+                          400-year rule (div by 400 or div by 4 but not 100)
+                        </td>
+                      </tr>
+                      <tr className="border-b border-slate-700/20">
+                        <td className="py-2">Hebrew</td>
+                        <td className="py-2 text-cyan-400">Anno Mundi</td>
+                        <td className="text-right py-2 font-mono">347,996</td>
+                        <td className="py-2 pl-4 text-slate-400">
+                          Tishri 1, 1 AM (3761 BCE)
+                        </td>
+                        <td className="py-2 pl-4 text-xs text-slate-500">
+                          19-year Metonic cycle (7 leap years per cycle)
+                        </td>
+                      </tr>
+                      <tr className="border-b border-slate-700/20">
+                        <td className="py-2">Islamic</td>
+                        <td className="py-2 text-cyan-400">Hijri</td>
+                        <td className="text-right py-2 font-mono">1,948,440</td>
+                        <td className="py-2 pl-4 text-slate-400">
+                          Friday, July 19, 622 CE
+                        </td>
+                        <td className="py-2 pl-4 text-xs text-slate-500">
+                          30-year cycle (11 leap years:
+                          2,5,7,10,13,16,18,21,24,26,29)
+                        </td>
+                      </tr>
+                      <tr className="border-b border-slate-700/20">
+                        <td className="py-2">Coptic</td>
+                        <td className="py-2 text-cyan-400">Era of Martyrs</td>
+                        <td className="text-right py-2 font-mono">1,825,030</td>
+                        <td className="py-2 pl-4 text-slate-400">
+                          August 29, 284 CE
+                        </td>
+                        <td className="py-2 pl-4 text-xs text-slate-500">
+                          Simple 4-year rule (every 4th year)
+                        </td>
+                      </tr>
+                      <tr className="border-b border-slate-700/20">
+                        <td className="py-2">Persian</td>
+                        <td className="py-2 text-cyan-400">Nowruz / Jalali</td>
+                        <td className="text-right py-2 font-mono">1,948,321</td>
+                        <td className="py-2 pl-4 text-slate-400">
+                          March 22, 622 CE
+                        </td>
+                        <td className="py-2 pl-4 text-xs text-slate-500">
+                          33-year cycle (8 leap years per cycle)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="py-2">Before Present</td>
+                        <td className="py-2 text-cyan-400">
+                          Radiocarbon Standard
+                        </td>
+                        <td className="text-right py-2 font-mono">2,433,283</td>
+                        <td className="py-2 pl-4 text-slate-400">
+                          January 1, 1950 CE
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>

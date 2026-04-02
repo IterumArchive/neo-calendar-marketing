@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Navigation } from "../components/Navigation";
 
 type Example = {
@@ -219,10 +219,26 @@ const categories = [
 export default function ApiExplorerPage() {
   const [activeCategory, setActiveCategory] = useState("Basics");
   const [selectedExample, setSelectedExample] = useState<Example>(examples[0]);
+  const [codeCopied, setCodeCopied] = useState(false);
 
   const filteredExamples = examples.filter(
     ex => ex.category === activeCategory,
   );
+
+  const handleCopyCode = async () => {
+    try {
+      await navigator.clipboard.writeText(selectedExample.code);
+      setCodeCopied(true);
+      setTimeout(() => setCodeCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy code:", err);
+    }
+  };
+
+  // Reset copied state when example changes
+  useEffect(() => {
+    setCodeCopied(false);
+  }, [selectedExample.id]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950">
@@ -317,14 +333,21 @@ export default function ApiExplorerPage() {
 
               <div className="bg-slate-800/30 border-t border-slate-700/50 px-4 sm:px-6 py-4">
                 <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-                  <button className="px-4 py-2 bg-slate-700/50 hover:bg-slate-600/50 text-white rounded-lg transition text-sm">
-                    📋 Copy Code
+                  <button
+                    onClick={handleCopyCode}
+                    className={`px-4 py-2 rounded-lg transition text-sm font-semibold ${
+                      codeCopied
+                        ? "bg-emerald-600 hover:bg-emerald-500 text-white"
+                        : "bg-slate-700/50 hover:bg-slate-600/50 text-white"
+                    }`}
+                  >
+                    {codeCopied ? "✓ Copied!" : "📋 Copy Code"}
                   </button>
                   <a
                     href="https://github.com/IterumArchive/neo-calendar"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-slate-700/50 hover:bg-slate-600/50 text-white rounded-lg transition text-sm"
+                    className="px-4 py-2 bg-slate-700/50 hover:bg-slate-600/50 text-white rounded-lg transition text-sm text-center"
                   >
                     📚 View Full Docs
                   </a>

@@ -16,6 +16,7 @@ export default function UseCasesPage() {
   const [scenario3, setScenario3] = useState<ScenarioResult | null>(null);
   const [scenario4, setScenario4] = useState<ScenarioResult | null>(null);
   const [scenario5, setScenario5] = useState<ScenarioResult | null>(null);
+  const [copiedId, setCopiedId] = useState<number | null>(null);
 
   const runScenario1 = () => {
     try {
@@ -98,6 +99,16 @@ export default function UseCasesPage() {
       });
     } catch (error) {
       console.error("Scenario 5 failed:", error);
+    }
+  };
+
+  const handleCopyCode = async (code: string, id: number) => {
+    try {
+      await navigator.clipboard.writeText(code);
+      setCopiedId(id);
+      setTimeout(() => setCopiedId(null), 2000);
+    } catch (err) {
+      console.error("Failed to copy code:", err);
     }
   };
 
@@ -230,10 +241,25 @@ const greg = nowruz.to('GREGORIAN');
               </div>
 
               {/* Code Example */}
-              <div className="bg-slate-900/80 rounded-xl p-2 sm:p-4 mb-4 border border-slate-700/50 overflow-x-auto">
-                <pre className="text-xs sm:text-sm text-slate-200">
-                  <code>{scenario.code}</code>
-                </pre>
+              <div className="bg-slate-900/80 rounded-xl mb-4 border border-slate-700/50 overflow-hidden">
+                <div className="flex items-center justify-between px-3 sm:px-4 py-2 bg-slate-800/50 border-b border-slate-700/50">
+                  <span className="text-xs text-slate-400">Code Example</span>
+                  <button
+                    onClick={() => handleCopyCode(scenario.code, scenario.id)}
+                    className={`px-3 py-1 rounded text-xs font-semibold transition ${
+                      copiedId === scenario.id
+                        ? "bg-emerald-600 hover:bg-emerald-500 text-white"
+                        : "bg-slate-700/50 hover:bg-slate-600/50 text-slate-300"
+                    }`}
+                  >
+                    {copiedId === scenario.id ? "✓ Copied" : "📋 Copy"}
+                  </button>
+                </div>
+                <div className="p-2 sm:p-4 overflow-x-auto">
+                  <pre className="text-xs sm:text-sm text-slate-200">
+                    <code>{scenario.code}</code>
+                  </pre>
+                </div>
               </div>
 
               {/* Try It Button */}

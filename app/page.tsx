@@ -16,6 +16,7 @@ export default function Home() {
     islamic: string;
     jdn: string;
   } | null>(null);
+  const [copiedPackage, setCopiedPackage] = useState<string | null>(null);
 
   // Update live clock every second
   useEffect(() => {
@@ -45,6 +46,16 @@ export default function Home() {
     const interval = setInterval(updateClock, 1000);
     return () => clearInterval(interval);
   }, []);
+
+  const handleCopyPackage = async (packageName: string, command: string) => {
+    try {
+      await navigator.clipboard.writeText(command);
+      setCopiedPackage(packageName);
+      setTimeout(() => setCopiedPackage(null), 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950">
@@ -127,12 +138,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
           {/* Tagline */}
           <div className="text-center mb-12">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight px-2">
               One Moment.
               <br />
               Infinite Perspectives.
             </h1>
-            <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 max-w-3xl mx-auto leading-relaxed px-4">
               The{" "}
               <span className="font-semibold text-blue-300">
                 unified field theory
@@ -145,12 +156,12 @@ export default function Home() {
           </div>
 
           {/* Live Clock - The "Wow" Moment */}
-          <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-8 mb-12 shadow-2xl">
+          <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-4 sm:p-6 md:p-8 mb-12 shadow-2xl">
             <div className="text-center mb-6">
-              <div className="text-sm font-medium text-slate-400 uppercase tracking-wider mb-2">
+              <div className="text-xs sm:text-sm font-medium text-slate-400 uppercase tracking-wider mb-2">
                 Right Now, This Moment
               </div>
-              <div className="text-xl font-medium text-slate-300 mb-2">
+              <div className="text-base sm:text-lg md:text-xl font-medium text-slate-300 mb-2">
                 {currentTime.toLocaleDateString("en-US", {
                   weekday: "long",
                   year: "numeric",
@@ -496,7 +507,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {/* Standard Package */}
               <div className="bg-gradient-to-br from-blue-900/40 to-blue-800/40 border border-blue-700/50 rounded-xl p-6 relative flex flex-col">
                 <div className="absolute -top-3 left-6 px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">
@@ -509,21 +520,21 @@ export default function Home() {
                   Most users start here. Includes core calendars with
                   tree-shaking support.
                 </p>
-                <div className="bg-slate-950/50 rounded-lg p-2 sm:p-3 mb-3 min-h-[60px] flex items-center overflow-x-auto">
-                  <code className="text-xs sm:text-sm text-green-400 font-mono whitespace-nowrap">
+                <div className="bg-slate-950/50 rounded-lg p-3 mb-3 min-h-[60px] flex items-center">
+                  <code className="text-xs sm:text-sm text-green-400 font-mono break-all">
                     npm install @iterumarchive/neo-calendar
                   </code>
                 </div>
                 <button
-                  onClick={() => {
-                    navigator.clipboard.writeText(
-                      "npm install @iterumarchive/neo-calendar",
-                    );
-                  }}
-                  className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition text-sm font-semibold mt-auto"
+                  onClick={() => handleCopyPackage('standard', 'npm install @iterumarchive/neo-calendar')}
+                  className={`w-full px-4 py-2 rounded-lg transition text-sm font-semibold mt-auto cursor-pointer ${
+                    copiedPackage === 'standard'
+                      ? 'bg-emerald-600 hover:bg-emerald-500 text-white'
+                      : 'bg-blue-600 hover:bg-blue-500 text-white'
+                  }`}
                   aria-label="Copy standard package installation command"
                 >
-                  📋 Copy Command
+                  {copiedPackage === 'standard' ? '✓ Copied!' : '📋 Copy Command'}
                 </button>
               </div>
 
@@ -533,21 +544,21 @@ export default function Home() {
                 <p className="text-slate-300 text-sm mb-4">
                   Zero configuration. All 12 calendars included out of the box.
                 </p>
-                <div className="bg-slate-950/50 rounded-lg p-2 sm:p-3 mb-3 min-h-[60px] flex items-center overflow-x-auto">
-                  <code className="text-xs sm:text-sm text-green-400 font-mono whitespace-nowrap">
+                <div className="bg-slate-950/50 rounded-lg p-3 mb-3 min-h-[60px] flex items-center">
+                  <code className="text-xs sm:text-sm text-green-400 font-mono break-all">
                     npm install @iterumarchive/neo-calendar-full
                   </code>
                 </div>
                 <button
-                  onClick={() => {
-                    navigator.clipboard.writeText(
-                      "npm install @iterumarchive/neo-calendar-full",
-                    );
-                  }}
-                  className="w-full px-4 py-2 bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition text-sm font-semibold mt-auto"
+                  onClick={() => handleCopyPackage('full', 'npm install @iterumarchive/neo-calendar-full')}
+                  className={`w-full px-4 py-2 rounded-lg transition text-sm font-semibold mt-auto cursor-pointer ${
+                    copiedPackage === 'full'
+                      ? 'bg-emerald-600 hover:bg-emerald-500 text-white'
+                      : 'bg-purple-600 hover:bg-purple-500 text-white'
+                  }`}
                   aria-label="Copy full package installation command"
                 >
-                  📋 Copy Command
+                  {copiedPackage === 'full' ? '✓ Copied!' : '📋 Copy Command'}
                 </button>
               </div>
 
@@ -558,21 +569,21 @@ export default function Home() {
                   For building custom calendar plugins and advanced
                   integrations.
                 </p>
-                <div className="bg-slate-950/50 rounded-lg p-2 sm:p-3 mb-3 min-h-[60px] flex items-center overflow-x-auto">
-                  <code className="text-xs sm:text-sm text-green-400 font-mono whitespace-nowrap">
+                <div className="bg-slate-950/50 rounded-lg p-3 mb-3 min-h-[60px] flex items-center">
+                  <code className="text-xs sm:text-sm text-green-400 font-mono break-all">
                     npm install @iterumarchive/neo-calendar-core
                   </code>
                 </div>
                 <button
-                  onClick={() => {
-                    navigator.clipboard.writeText(
-                      "npm install @iterumarchive/neo-calendar-core",
-                    );
-                  }}
-                  className="w-full px-4 py-2 bg-slate-600 hover:bg-slate-500 text-white rounded-lg transition text-sm font-semibold mt-auto"
+                  onClick={() => handleCopyPackage('core', 'npm install @iterumarchive/neo-calendar-core')}
+                  className={`w-full px-4 py-2 rounded-lg transition text-sm font-semibold mt-auto cursor-pointer ${
+                    copiedPackage === 'core'
+                      ? 'bg-emerald-600 hover:bg-emerald-500 text-white'
+                      : 'bg-slate-600 hover:bg-slate-500 text-white'
+                  }`}
                   aria-label="Copy core package installation command"
                 >
-                  📋 Copy Command
+                  {copiedPackage === 'core' ? '✓ Copied!' : '📋 Copy Command'}
                 </button>
               </div>
             </div>
