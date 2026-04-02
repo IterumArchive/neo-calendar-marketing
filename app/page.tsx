@@ -124,7 +124,7 @@ export default function Home() {
       {/* Main Content */}
       <main>
         {/* Hero Section */}
-        <div className="max-w-7xl mx-auto px-8 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
           {/* Tagline */}
           <div className="text-center mb-12">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
@@ -158,7 +158,7 @@ export default function Home() {
                   day: "numeric",
                 })}
               </div>
-              <div className="text-5xl font-mono font-bold text-white">
+              <div className="text-3xl sm:text-4xl md:text-5xl font-mono font-bold text-white">
                 {currentTime.toLocaleTimeString("en-US", {
                   hour: "2-digit",
                   minute: "2-digit",
@@ -273,7 +273,7 @@ export default function Home() {
                 href="/converter"
                 className="group bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center"
               >
-                <div className="text-6xl mb-4">⚡</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl mb-4">⚡</div>
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform">
                   Converter →
                 </h3>
@@ -286,7 +286,7 @@ export default function Home() {
                 href="/inspector"
                 className="group bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center"
               >
-                <div className="text-6xl mb-4">🔍</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform">
                   JDN Lookup →
                 </h3>
@@ -302,7 +302,7 @@ export default function Home() {
                 href="/arithmetic"
                 className="group bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center block"
               >
-                <div className="text-6xl mb-4">🧮</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl mb-4">🧮</div>
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform">
                   Date Intelligence →
                 </h3>
@@ -318,7 +318,7 @@ export default function Home() {
                 href="/api-explorer"
                 className="group bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center"
               >
-                <div className="text-6xl mb-4">🧑‍💻</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl mb-4">🧑‍💻</div>
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform">
                   Code Examples →
                 </h3>
@@ -331,7 +331,7 @@ export default function Home() {
                 href="/use-cases"
                 className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center"
               >
-                <div className="text-6xl mb-4">💡</div>
+                <div className="text-4xl sm:text-5xl md:text-6xl mb-4">💡</div>
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:scale-105 transition-transform">
                   Use Cases →
                 </h3>
@@ -509,8 +509,8 @@ export default function Home() {
                   Most users start here. Includes core calendars with
                   tree-shaking support.
                 </p>
-                <div className="bg-slate-950/50 rounded-lg p-3 mb-3 min-h-[60px] flex items-center">
-                  <code className="text-sm text-green-400 font-mono">
+                <div className="bg-slate-950/50 rounded-lg p-2 sm:p-3 mb-3 min-h-[60px] flex items-center overflow-x-auto">
+                  <code className="text-xs sm:text-sm text-green-400 font-mono whitespace-nowrap">
                     npm install @iterumarchive/neo-calendar
                   </code>
                 </div>
@@ -533,8 +533,8 @@ export default function Home() {
                 <p className="text-slate-300 text-sm mb-4">
                   Zero configuration. All 12 calendars included out of the box.
                 </p>
-                <div className="bg-slate-950/50 rounded-lg p-3 mb-3 min-h-[60px] flex items-center">
-                  <code className="text-sm text-green-400 font-mono">
+                <div className="bg-slate-950/50 rounded-lg p-2 sm:p-3 mb-3 min-h-[60px] flex items-center overflow-x-auto">
+                  <code className="text-xs sm:text-sm text-green-400 font-mono whitespace-nowrap">
                     npm install @iterumarchive/neo-calendar-full
                   </code>
                 </div>
@@ -558,8 +558,8 @@ export default function Home() {
                   For building custom calendar plugins and advanced
                   integrations.
                 </p>
-                <div className="bg-slate-950/50 rounded-lg p-3 mb-3 min-h-[60px] flex items-center">
-                  <code className="text-sm text-green-400 font-mono">
+                <div className="bg-slate-950/50 rounded-lg p-2 sm:p-3 mb-3 min-h-[60px] flex items-center overflow-x-auto">
+                  <code className="text-xs sm:text-sm text-green-400 font-mono whitespace-nowrap">
                     npm install @iterumarchive/neo-calendar-core
                   </code>
                 </div>
@@ -761,14 +761,14 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="mt-12 pb-12">
-        <div className="max-w-7xl mx-auto px-8 text-center text-slate-500 text-sm space-y-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 text-center text-slate-500 text-xs sm:text-sm space-y-3">
           <p>
             Built with TypeScript and Vitest, powered by Julian Day Number (JDN)
-            — <br />
+            — <br className="hidden sm:inline" />
             the universal reference built on centuries of astronomical
             observation.
           </p>
-          <div className="text-center text-slate-500 text-sm space-y-2">
+          <div className="text-center text-slate-500 text-xs sm:text-sm space-y-2">
             Built by{" "}
             <a
               href="https://iterumarchive.org"

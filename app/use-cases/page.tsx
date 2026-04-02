@@ -188,10 +188,10 @@ const greg = nowruz.to('GREGORIAN');
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950">
       <Navigation />
 
-      <div className="max-w-7xl mx-auto px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
             Real-World Use Cases
           </h1>
           <p className="text-xl text-slate-300">
@@ -230,8 +230,8 @@ const greg = nowruz.to('GREGORIAN');
               </div>
 
               {/* Code Example */}
-              <div className="bg-slate-900/80 rounded-xl p-4 mb-4 border border-slate-700/50">
-                <pre className="text-sm text-slate-200 overflow-x-auto">
+              <div className="bg-slate-900/80 rounded-xl p-2 sm:p-4 mb-4 border border-slate-700/50 overflow-x-auto">
+                <pre className="text-xs sm:text-sm text-slate-200">
                   <code>{scenario.code}</code>
                 </pre>
               </div>

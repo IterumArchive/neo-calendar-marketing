@@ -228,10 +228,10 @@ export default function ApiExplorerPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950">
       <Navigation />
 
-      <div className="max-w-7xl mx-auto px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
             API Explorer
           </h1>
           <p className="text-xl text-slate-300">
@@ -309,8 +309,8 @@ export default function ApiExplorerPage() {
                 </p>
               </div>
 
-              <div className="p-6">
-                <pre className="text-sm text-slate-200 overflow-x-auto bg-slate-950/50 rounded-lg p-6 border border-slate-700/50">
+              <div className="p-3 sm:p-6">
+                <pre className="text-xs sm:text-sm text-slate-200 overflow-x-auto bg-slate-950/50 rounded-lg p-3 sm:p-6 border border-slate-700/50">
                   <code>{selectedExample.code}</code>
                 </pre>
               </div>

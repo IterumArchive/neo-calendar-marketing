@@ -258,7 +258,7 @@ export default function FormattingPage() {
       <div className="max-w-7xl mx-auto px-8 pb-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
             Formatting & Extended Features
           </h1>
           <p className="text-slate-600 dark:text-slate-400 text-lg">
