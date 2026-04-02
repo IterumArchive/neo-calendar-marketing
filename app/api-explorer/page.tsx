@@ -321,7 +321,7 @@ export default function ApiExplorerPage() {
                     📋 Copy Code
                   </button>
                   <a
-                    href="https://github.com/yourusername/neo-calendar"
+                    href="https://github.com/IterumArchive/neo-calendar"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-4 py-2 bg-slate-700/50 hover:bg-slate-600/50 text-white rounded-lg transition text-sm"
@@ -350,10 +350,64 @@ export default function ApiExplorerPage() {
           </div>
         </div>
 
+        {/* Installation Guide */}
+        <div className="mt-16 bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-700/50 rounded-2xl p-8">
+          <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+            <span className="text-3xl">📦</span> Installation
+          </h2>
+          <p className="text-slate-300 mb-6">
+            Choose the package that fits your needs:
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-slate-900/50 rounded-lg p-4">
+              <div className="text-blue-400 font-semibold mb-2 text-sm">
+                Standard (Recommended)
+              </div>
+              <div className="bg-slate-950/50 rounded p-3 mb-3">
+                <code className="text-xs text-green-400 font-mono break-all">
+                  npm install @iterumarchive/neo-calendar
+                </code>
+              </div>
+              <p className="text-xs text-slate-400">
+                Tree-shakeable, includes core calendars
+              </p>
+            </div>
+
+            <div className="bg-slate-900/50 rounded-lg p-4">
+              <div className="text-purple-400 font-semibold mb-2 text-sm">
+                Full
+              </div>
+              <div className="bg-slate-950/50 rounded p-3 mb-3">
+                <code className="text-xs text-green-400 font-mono break-all">
+                  npm install @iterumarchive/neo-calendar-full
+                </code>
+              </div>
+              <p className="text-xs text-slate-400">
+                All 12 calendars, zero configuration
+              </p>
+            </div>
+
+            <div className="bg-slate-900/50 rounded-lg p-4">
+              <div className="text-slate-400 font-semibold mb-2 text-sm">
+                Core
+              </div>
+              <div className="bg-slate-950/50 rounded p-3 mb-3">
+                <code className="text-xs text-green-400 font-mono break-all">
+                  npm install @iterumarchive/neo-calendar-core
+                </code>
+              </div>
+              <p className="text-xs text-slate-400">
+                For building custom plugins
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Quick Links */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6">
+        <div className="mt-8 grid md:grid-cols-3 gap-6">
           <a
-            href="https://github.com/yourusername/neo-calendar"
+            href="https://github.com/IterumArchive/neo-calendar"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-xl p-6 hover:border-slate-600/50 transition"
@@ -368,7 +422,7 @@ export default function ApiExplorerPage() {
           </a>
 
           <a
-            href="https://npmjs.com/package/@iterumarchive/neo-calendar"
+            href="https://www.npmjs.com/package/@iterumarchive/neo-calendar"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-xl p-6 hover:border-slate-600/50 transition"

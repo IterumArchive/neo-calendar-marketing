@@ -278,7 +278,7 @@ const greg = nowruz.to('GREGORIAN');
           </p>
           <div className="flex gap-4 justify-center">
             <a
-              href="https://github.com/yourusername/neo-calendar"
+              href="https://github.com/IterumArchive/neo-calendar"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-white text-purple-900 font-bold rounded-xl hover:bg-slate-100 transition"
@@ -286,7 +286,7 @@ const greg = nowruz.to('GREGORIAN');
               View on GitHub
             </a>
             <a
-              href="https://npmjs.com/package/@iterumarchive/neo-calendar"
+              href="https://www.npmjs.com/package/@iterumarchive/neo-calendar"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-700 transition"

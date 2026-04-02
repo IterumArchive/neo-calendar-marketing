@@ -8,8 +8,15 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IterumArchive/neo-calendar"
+  },
+  "bugs": {
+    "url": "https://github.com/IterumArchive/neo-calendar/issues"
+  },
+  "homepage": "https://github.com/IterumArchive/neo-calendar#readme",
   "dependencies": {
-    "@iterumarchive/neo-calendar": "^0.1.1",
     "@iterumarchive/neo-calendar-full": "^0.1.1",
     "@tailwindcss/postcss": "^4.0.0",
     "next": "^15.0.0",
