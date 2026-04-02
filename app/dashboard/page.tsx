@@ -509,6 +509,7 @@ export default function DashboardPage() {
                 <h4 className="text-sm font-semibold text-indigo-300 mb-3">
                   Calendar Epochs & Historical Names
                 </h4>
+                <div className="overflow-x-auto -mx-4 px-4">
                 <table className="w-full text-xs">
                   <thead>
                     <tr className="border-b border-indigo-700/30">
@@ -600,6 +601,7 @@ export default function DashboardPage() {
                     </tr>
                   </tbody>
                 </table>
+                </div>
               </div>
             </div>
 

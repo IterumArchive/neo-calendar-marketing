@@ -177,9 +177,9 @@ export default function InspectorPage() {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
             {/* JDN to Date */}
-            <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
+            <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 sm:p-6 lg:p-8">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
                 <span className="text-3xl">🔍</span> JDN → Date Lookup
               </h2>
@@ -188,18 +188,18 @@ export default function InspectorPage() {
                 <label className="block text-sm font-medium text-slate-300 mb-2">
                   Julian Day Number
                 </label>
-                <div className="flex gap-3">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                   <input
                     type="text"
                     value={jdnInput}
                     onChange={e => setJdnInput(e.target.value)}
                     onKeyPress={e => e.key === "Enter" && handleJdnLookup()}
                     placeholder="2461127"
-                    className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent font-mono text-lg"
+                    className="flex-1 px-3 sm:px-4 py-2 sm:py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent font-mono text-base sm:text-lg"
                   />
                   <button
                     onClick={handleJdnLookup}
-                    className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-500 transition-all shadow-lg hover:shadow-xl"
+                    className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-500 transition-all shadow-lg hover:shadow-xl whitespace-nowrap"
                   >
                     Lookup
                   </button>
@@ -238,7 +238,7 @@ export default function InspectorPage() {
                               <div className="text-sm font-semibold text-slate-400">
                                 {name}
                               </div>
-                              <div className="text-lg font-mono font-bold text-white group-hover:text-cyan-400 transition-colors">
+                              <div className="text-base sm:text-lg font-mono font-bold text-white group-hover:text-cyan-400 transition-colors break-all">
                                 {jdnResults[id]}
                               </div>
                             </div>
@@ -255,7 +255,7 @@ export default function InspectorPage() {
                   <h3 className="text-sm font-semibold text-purple-300 mb-3 uppercase tracking-wider">
                     Metadata (Gregorian Reference)
                   </h3>
-                  <div className="grid grid-cols-2 gap-3 text-sm">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                     <div>
                       <span className="text-slate-400">Day of Week:</span>
                       <div className="text-white font-semibold">
@@ -286,7 +286,7 @@ export default function InspectorPage() {
             </div>
 
             {/* Date to JDN */}
-            <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
+            <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 sm:p-6 lg:p-8">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
                 <span className="text-3xl">📅</span> Date → JDN Conversion
               </h2>
@@ -361,7 +361,7 @@ export default function InspectorPage() {
                     <div className="text-xs font-semibold text-cyan-300 uppercase tracking-wider mb-2">
                       Julian Day Number
                     </div>
-                    <div className="text-4xl font-mono font-bold text-transparent bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text">
+                    <div className="text-2xl sm:text-3xl md:text-4xl font-mono font-bold text-transparent bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text break-all">
                       {dateJdn}
                     </div>
                   </div>
@@ -372,21 +372,21 @@ export default function InspectorPage() {
                         Date Information
                       </h3>
                       <div className="space-y-3 text-sm">
-                        <div className="flex justify-between">
+                        <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
                           <span className="text-slate-400">Display:</span>
-                          <span className="text-white font-mono">
+                          <span className="text-white font-mono break-all text-xs sm:text-sm">
                             {dateMetadata.display}
                           </span>
                         </div>
-                        <div className="flex justify-between">
+                        <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
                           <span className="text-slate-400">Era:</span>
                           <span className="text-white font-semibold">
                             {dateMetadata.era || "N/A"}
                           </span>
                         </div>
-                        <div className="flex justify-between">
+                        <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
                           <span className="text-slate-400">Calendar Type:</span>
-                          <span className="text-white font-semibold">
+                          <span className="text-white font-semibold break-words">
                             {calendar}
                           </span>
                         </div>

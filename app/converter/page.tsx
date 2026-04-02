@@ -235,10 +235,10 @@ export default function ConverterPage() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
             {/* Source Panel */}
             <div className="lg:col-span-1">
-              <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 sticky top-8">
+              <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 sm:p-6 sticky top-8">
                 <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
                   <span className="text-2xl">📥</span> Source Date
                 </h2>
@@ -310,7 +310,7 @@ export default function ConverterPage() {
                     <div className="text-xs text-slate-400 mb-1">
                       {sourceCalendarObj.icon} {sourceCalendarObj.name}
                     </div>
-                    <div className="text-lg font-mono font-bold text-white">
+                    <div className="text-base sm:text-lg font-mono font-bold text-white break-all">
                       {year.toString().padStart(4, "0")}-
                       {month.toString().padStart(2, "0")}-
                       {day.toString().padStart(2, "0")}
@@ -330,7 +330,7 @@ export default function ConverterPage() {
                     <div className="text-xs text-purple-300 mb-1">
                       Julian Day Number (JDN)
                     </div>
-                    <div className="text-xl font-mono font-bold text-purple-200">
+                    <div className="text-lg sm:text-xl font-mono font-bold text-purple-200 break-all">
                       {sourceJdn}
                     </div>
                     <div className="text-xs text-slate-400 mt-2">
@@ -483,7 +483,7 @@ export default function ConverterPage() {
                                     {result.error}
                                   </div>
                                 ) : (
-                                  <div className="text-xl font-mono font-bold text-white">
+                                  <div className="text-base sm:text-lg md:text-xl font-mono font-bold text-white break-all">
                                     {result.display}
                                   </div>
                                 )}

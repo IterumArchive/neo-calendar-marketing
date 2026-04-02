@@ -271,9 +271,9 @@ export default function ApiExplorerPage() {
           ))}
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
           {/* Example List */}
-          <div className="lg:col-span-1 space-y-2">
+          <div className="lg:col-span-1 space-y-2 min-w-0">
             <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-4">
               {activeCategory} Examples
             </h3>
@@ -298,9 +298,9 @@ export default function ApiExplorerPage() {
           </div>
 
           {/* Code Display */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 min-w-0">
             <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl overflow-hidden">
-              <div className="bg-slate-800/50 border-b border-slate-700/50 px-6 py-4">
+              <div className="bg-slate-800/50 border-b border-slate-700/50 px-4 sm:px-6 py-4">
                 <h2 className="text-xl font-bold text-white">
                   {selectedExample.title}
                 </h2>
@@ -309,14 +309,14 @@ export default function ApiExplorerPage() {
                 </p>
               </div>
 
-              <div className="p-3 sm:p-6">
-                <pre className="text-xs sm:text-sm text-slate-200 overflow-x-auto bg-slate-950/50 rounded-lg p-3 sm:p-6 border border-slate-700/50">
-                  <code>{selectedExample.code}</code>
+              <div className="p-3 sm:p-6 overflow-hidden">
+                <pre className="text-xs sm:text-sm text-slate-200 overflow-x-auto bg-slate-950/50 rounded-lg p-3 sm:p-6 border border-slate-700/50 max-w-full">
+                  <code className="block">{selectedExample.code}</code>
                 </pre>
               </div>
 
-              <div className="bg-slate-800/30 border-t border-slate-700/50 px-6 py-4">
-                <div className="flex gap-4">
+              <div className="bg-slate-800/30 border-t border-slate-700/50 px-4 sm:px-6 py-4">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
                   <button className="px-4 py-2 bg-slate-700/50 hover:bg-slate-600/50 text-white rounded-lg transition text-sm">
                     📋 Copy Code
                   </button>
