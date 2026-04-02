@@ -31,6 +31,7 @@ export default function ArithmeticPage() {
       handling: string;
       color: string;
     }>;
+    sharedJDN: string;
   } | null>(null);
 
   // Demo 4: Historical calendar transition
