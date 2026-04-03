@@ -5,12 +5,12 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navItems = [
-  { href: "/arithmetic", label: "Date Intelligence" },
+  { href: "/date-intelligence", label: "Date Intelligence" },
   { href: "/use-cases", label: "Use Cases" },
   { href: "/api-explorer", label: "Code Examples" },
   { href: "/inspector", label: "JDN Lookup" },
   { href: "/converter", label: "Converter" },
-  { href: "/dashboard", label: "Validation" },
+  { href: "/validations", label: "Validations" },
 ];
 
 export function Navigation() {

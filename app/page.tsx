@@ -310,7 +310,7 @@ export default function Home() {
             {/* Row 2: Date Intelligence (Full Width) */}
             <div className="mb-6">
               <Link
-                href="/arithmetic"
+                href="/date-intelligence"
                 className="group bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 rounded-2xl p-8 transition-all shadow-xl hover:shadow-2xl text-center block"
               >
                 <div className="text-4xl sm:text-5xl md:text-6xl mb-4">🧮</div>
@@ -447,7 +447,7 @@ export default function Home() {
 
             <div className="text-center">
               <Link
-                href="/dashboard"
+                href="/validations"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold rounded-lg transition shadow-lg"
               >
                 <span>📊</span> View Full Validation Dashboard →
@@ -526,15 +526,22 @@ export default function Home() {
                   </code>
                 </div>
                 <button
-                  onClick={() => handleCopyPackage('standard', 'npm install @iterumarchive/neo-calendar')}
+                  onClick={() =>
+                    handleCopyPackage(
+                      "standard",
+                      "npm install @iterumarchive/neo-calendar",
+                    )
+                  }
                   className={`w-full px-4 py-2 rounded-lg transition text-sm font-semibold mt-auto cursor-pointer ${
-                    copiedPackage === 'standard'
-                      ? 'bg-emerald-600 hover:bg-emerald-500 text-white'
-                      : 'bg-blue-600 hover:bg-blue-500 text-white'
+                    copiedPackage === "standard"
+                      ? "bg-emerald-600 hover:bg-emerald-500 text-white"
+                      : "bg-blue-600 hover:bg-blue-500 text-white"
                   }`}
                   aria-label="Copy standard package installation command"
                 >
-                  {copiedPackage === 'standard' ? '✓ Copied!' : '📋 Copy Command'}
+                  {copiedPackage === "standard"
+                    ? "✓ Copied!"
+                    : "📋 Copy Command"}
                 </button>
               </div>
 
@@ -550,15 +557,20 @@ export default function Home() {
                   </code>
                 </div>
                 <button
-                  onClick={() => handleCopyPackage('full', 'npm install @iterumarchive/neo-calendar-full')}
+                  onClick={() =>
+                    handleCopyPackage(
+                      "full",
+                      "npm install @iterumarchive/neo-calendar-full",
+                    )
+                  }
                   className={`w-full px-4 py-2 rounded-lg transition text-sm font-semibold mt-auto cursor-pointer ${
-                    copiedPackage === 'full'
-                      ? 'bg-emerald-600 hover:bg-emerald-500 text-white'
-                      : 'bg-purple-600 hover:bg-purple-500 text-white'
+                    copiedPackage === "full"
+                      ? "bg-emerald-600 hover:bg-emerald-500 text-white"
+                      : "bg-purple-600 hover:bg-purple-500 text-white"
                   }`}
                   aria-label="Copy full package installation command"
                 >
-                  {copiedPackage === 'full' ? '✓ Copied!' : '📋 Copy Command'}
+                  {copiedPackage === "full" ? "✓ Copied!" : "📋 Copy Command"}
                 </button>
               </div>
 
@@ -575,15 +587,20 @@ export default function Home() {
                   </code>
                 </div>
                 <button
-                  onClick={() => handleCopyPackage('core', 'npm install @iterumarchive/neo-calendar-core')}
+                  onClick={() =>
+                    handleCopyPackage(
+                      "core",
+                      "npm install @iterumarchive/neo-calendar-core",
+                    )
+                  }
                   className={`w-full px-4 py-2 rounded-lg transition text-sm font-semibold mt-auto cursor-pointer ${
-                    copiedPackage === 'core'
-                      ? 'bg-emerald-600 hover:bg-emerald-500 text-white'
-                      : 'bg-slate-600 hover:bg-slate-500 text-white'
+                    copiedPackage === "core"
+                      ? "bg-emerald-600 hover:bg-emerald-500 text-white"
+                      : "bg-slate-600 hover:bg-slate-500 text-white"
                   }`}
                   aria-label="Copy core package installation command"
                 >
-                  {copiedPackage === 'core' ? '✓ Copied!' : '📋 Copy Command'}
+                  {copiedPackage === "core" ? "✓ Copied!" : "📋 Copy Command"}
                 </button>
               </div>
             </div>
@@ -615,16 +632,24 @@ export default function Home() {
               <span className="text-3xl">🌐</span> 12,000 Years of Timekeeping,
               Unified
             </h2>
-            <p className="text-slate-400 mb-6">
+            {/* center text on mobile */}
+            <p className="text-slate-400 mb-6  leading-relaxed text-center md:text-left">
               Centuries of astronomical observation and cultural tradition, now
               unified in the digital age
             </p>
             <div className="space-y-4 sm:space-y-4">
               {/* Neo Calendar - Starting Node */}
-              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 group">
-                <div className="flex items-center gap-3 sm:block sm:w-40 sm:text-right space-y-0 sm:space-y-1">
-                  <div className="w-8 h-8 sm:hidden rounded-full bg-purple-500 flex items-center justify-center text-base shrink-0">
-                    🚀
+              <div className="flex flex-col justify-center sm:flex-row sm:items-center gap-3 sm:gap-4 group">
+                <div
+                  style={{ justifyContent: "center" }}
+                  className="flex items-center gap-3 sm:block sm:w-40 sm:text-right space-y-0 sm:space-y-1"
+                >
+                  <div className="relative sm:hidden">
+                    <div className="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-base shrink-0">
+                      🚀
+                    </div>
+                    {/* Line below icon */}
+                    <div className="absolute top-8 left-1/2 -translate-x-1/2 w-0.5 h-3 bg-slate-600/50" />
                   </div>
                   <div>
                     <div className="font-mono font-bold text-purple-400 text-base sm:text-sm">
@@ -636,7 +661,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="relative hidden sm:block">
-                  <div className="w-6 h-6 rounded-full bg-purple-500 flex items-center justify-center text-xs group-hover:scale-110 transition-transform">
+                  <div
+                    style={{ justifyContent: "center" }}
+                    className="w-6 h-6 rounded-full bg-purple-500 flex items-center justify-center text-xs group-hover:scale-110 transition-transform"
+                  >
                     🚀
                   </div>
                   <div className="absolute top-6 left-3 w-0.5 h-8 bg-slate-700/50" />
@@ -674,13 +702,22 @@ export default function Home() {
                   return (
                     <div
                       key={cal.id}
-                      className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 group"
+                      className="flex flex-col justify-center sm:flex-row sm:items-center gap-3 sm:gap-4 group"
                     >
-                      <div className="flex items-center gap-3 sm:block sm:w-40 sm:text-right space-y-0 sm:space-y-1">
-                        <div
-                          className={`w-8 h-8 sm:hidden rounded-full ${cal.color} flex items-center justify-center text-base shrink-0`}
-                        >
-                          {cal.icon}
+                      <div
+                        style={{ justifyContent: "center" }}
+                        className="flex items-center gap-3 sm:block sm:w-40 sm:text-right space-y-0 sm:space-y-1"
+                      >
+                        <div className="relative sm:hidden">
+                          {/* Line above icon */}
+                          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-0.5 h-3 bg-slate-600/50" />
+                          <div
+                            className={`w-8 h-8 rounded-full ${cal.color} flex items-center justify-center text-base shrink-0`}
+                          >
+                            {cal.icon}
+                          </div>
+                          {/* Line below icon */}
+                          <div className="absolute top-8 left-1/2 -translate-x-1/2 w-0.5 h-3 bg-slate-600/50" />
                         </div>
                         <div>
                           <div className="font-mono font-bold text-cyan-400 text-base sm:text-sm">
@@ -716,10 +753,17 @@ export default function Home() {
                 })}
 
               {/* Holocene Epoch - Ending Node */}
-              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 group">
-                <div className="flex items-center gap-3 sm:block sm:w-40 sm:text-right space-y-0 sm:space-y-1">
-                  <div className="w-8 h-8 sm:hidden rounded-full bg-emerald-500 flex items-center justify-center text-base shrink-0">
-                    🌅
+              <div className="flex flex-col justify-center sm:flex-row sm:items-center gap-3 sm:gap-4 group">
+                <div
+                  style={{ justifyContent: "center" }}
+                  className="flex items-center gap-3 sm:block sm:w-40 sm:text-right space-y-0 sm:space-y-1"
+                >
+                  <div className="relative sm:hidden">
+                    {/* Line above icon */}
+                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-0.5 h-3 bg-slate-600/50" />
+                    <div className="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-base shrink-0">
+                      🌅
+                    </div>
                   </div>
                   <div>
                     <div className="font-mono font-bold text-emerald-400 text-base sm:text-sm">

@@ -298,26 +298,26 @@ const greg = nowruz.to('GREGORIAN');
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Build?
           </h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-slate-300 mb-8 max-w-2xl mx-auto px-4">
             These are just a few examples. With 12 calendar systems and
             comprehensive date arithmetic, the possibilities are endless.
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4 max-w-2xl mx-auto">
             <a
               href="https://github.com/IterumArchive/neo-calendar"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-white text-purple-900 font-bold rounded-xl hover:bg-slate-100 transition"
+              className="px-6 py-3 bg-white text-purple-900 font-semibold rounded-lg hover:bg-slate-100 transition flex items-center justify-center gap-2"
             >
-              View on GitHub
+              <span>⭐</span> View on GitHub
             </a>
             <a
               href="https://www.npmjs.com/package/@iterumarchive/neo-calendar"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-700 transition"
+              className="px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition flex items-center justify-center gap-2"
             >
-              Install from npm
+              <span>📦</span> Install from npm
             </a>
           </div>
         </div>
