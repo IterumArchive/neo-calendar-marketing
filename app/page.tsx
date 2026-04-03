@@ -151,7 +151,7 @@ export default function Home() {
               for human timekeeping.
               <br />
               Convert dates across 12 calendar systems with mathematical
-              precision.
+              precision—built with TypeScript.
             </p>
           </div>
 
@@ -490,8 +490,9 @@ export default function Home() {
                   Battle-Tested Beta
                 </h3>
                 <p className="text-slate-300 text-sm leading-relaxed">
-                  TypeScript · ESM · Tree-shakeable · 5kb-50kb bundle sizes ·
-                  Plugin architecture · Extensively tested, actively maintained
+                  TypeScript · ESM · Tree-shakeable · Zero Dependencies ·
+                  5kb-50kb bundle sizes · Plugin architecture · Extensively
+                  tested, actively maintained
                 </p>
               </div>
 
