@@ -825,7 +825,7 @@ export default function Home() {
             observation.
           </p>
           <div className="text-center text-slate-500 text-xs sm:text-sm space-y-2">
-            Built by{" "}
+            Developed by{" "}
             <a
               href="https://iterumarchive.org"
               target="_blank"
